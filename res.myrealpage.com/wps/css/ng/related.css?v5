@@ -1,0 +1,261 @@
+.mrp-listing-related,
+.mrp-listing-sold-related {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	visibility: hidden; /* can't be display: none for scroll trigger to work */
+	opacity: 0;
+	height: 0;
+}
+
+.mrp-listing-related.on,
+.mrp-listing-sold-related.on {
+	position: relative;
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+	margin: 10px 0;
+	-webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  	-webkit-transition-duration: 1.35s;
+       -o-transition-duration: 1.35s;
+          transition-duration: 1.35s;
+  	-webkit-transition-property: height, opacity;
+       -o-transition-property: height, opacity;
+          transition-property: height, opacity;
+}
+
+.mrp-listing-related.on a,
+.mrp-listing-sold-related.on a {
+	color: inherit;
+}
+
+.mrp-listing-related:before,
+.mrp-listing-sold-related:before {
+	content: "Similar listings:";
+	display: block;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+	font-size: 150%;
+	border-bottom: 1px dotted #aaa;
+}
+
+.mrp-listing-sold-related:before {
+	content: "Similar sold:";
+}
+
+.mrp-listing-related *,
+.mrp-listing-sold-related * {
+	box-sizing: border-box;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+.mrp-listing-related > div,
+.mrp-listing-sold-related > div {
+	/* inner */
+	/* overflow: hidden; */
+	position: relative;
+}
+
+.mrp-listing-related > div > .related-listing,
+.mrp-listing-sold-related > div > .related-listing {
+	display: block;
+	float: left;
+	position: relative;
+	width: 50%;
+	font-weight: normal;
+}
+
+.mrp-listing-related > div > .related-listing:hover,
+.mrp-listing-sold-related > div > .related-listing:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+.mrp-listing-related > div > .related-listing .related-image,
+.mrp-listing-sold-related > div > .related-listing .related-image {
+	width: 100%;
+	height: 0;
+	padding-bottom: 75%;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 0 10px #aaa;
+	margin: 5px 0;
+}
+
+.mrp-listing-related > div > .related-listing .related-recip-logo,
+.mrp-listing-sold-related > div > .related-listing .related-recip-logo {
+	display: inline-block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	opacity: 0.5;
+}
+
+.mrp-listing-related > div > .related-listing .related-image .related-photo,
+.mrp-listing-sold-related > div > .related-listing .related-image .related-photo {
+	
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	width: 120%;
+	min-width: 120%;
+	height: auto;
+}
+
+.mrp-listing-related > div > .related-listing .related-image .related-banner,
+.mrp-listing-sold-related > div > .related-listing .related-image .related-banner {
+	position: absolute;
+	z-index: 10;
+}
+
+.mrp-listing-related > div .related-price,
+.mrp-listing-related > div .related-address,
+.mrp-listing-related > div .related-mls-num,
+.mrp-listing-related > div .related-listed-by,
+.mrp-listing-sold-related > div .related-price,
+.mrp-listing-sold-related > div .related-address,
+.mrp-listing-sold-related > div .related-mls-num,
+.mrp-listing-sold-related > div .related-listed-by {
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	line-height: 150%;
+}
+.mrp-listing-sold-related > div .related-price.sold {
+	color: #dc3545;
+}
+
+.mrp-listing-related > div .related-price,
+.mrp-listing-related > div .related-address,
+.mrp-listing-sold-related > div .related-price,
+.mrp-listing-sold-related > div .related-address {
+	/* line-height: 160%; */
+}
+
+.mrp-listing-related > div .related-price,
+.mrp-listing-sold-related > div .related-price {
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.mrp-listing-related .related-left,
+.mrp-listing-related .related-right,
+.mrp-listing-sold-related .related-left,
+.mrp-listing-sold-related .related-right {
+	min-height: 30%;
+	min-width: 30px;
+	background-color: yellow;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	box-shadow: 0 0 5px #aaa;
+}
+
+.mrp-listing-related .related-left,
+.mrp-listing-sold-related .related-left {
+	left: 0;
+	z-index: 10;
+}
+.mrp-listing-related .related-right,
+.mrp-listing-sold-related .related-right {
+	right: 0;
+	z-index: 0;
+}
+
+.mrp-listing-related > div,
+.mrp-listing-sold-related > div {
+	width: calc(100% + 40px);
+	display: table;
+}
+
+.mrp-listing-related > div:after,
+.mrp-listing-sold-related > div:after {
+	content: "";
+	clear: both;
+	position: relative;
+}
+.mrp-listing-related .related-listing,
+.mrp-listing-sold-related .related-listing {
+	padding-bottom: 20px;
+}
+
+.mrp-listing-related *,
+.mrp-listing-sold-related * {
+	font-size: 95%;
+}
+
+.mrp-listing-related > div .related-price,
+.mrp-listing-sold-related > div .related-price {
+	font-size: 150%;
+}
+
+/* responsiveness */
+
+
+
+.mrp-listing-content.xs .mrp-listing-related > div > .related-listing,
+.mrp-listing-content.xs .mrp-listing-sold-related > div > .related-listing {
+	margin-right: 10px;
+	width: calc( 50% - 20px );	
+}
+
+.mrp-listing-content.xs.sm .mrp-listing-related *,
+.listing-content .mrp-listing-related *,
+.mrp-listing-content.xs.sm .mrp-listing-sold-related *,
+.listing-content .mrp-listing-sold-related * {
+	font-size: 100%;
+}
+
+.mrp-listing-content.xs .mrp-listing-related .related-price,
+.mrp-listing-content.xs .mrp-listing-sold-related .related-price {
+	font-size: 130%;
+}
+
+.mrp-listing-content.xs.sm .mrp-listing-related > div > .related-listing,
+.listing-content .mrp-listing-related > div > .related-listing,
+.mrp-listing-content.xs.sm .mrp-listing-sold-related > div > .related-listing,
+.listing-content .mrp-listing-sold-related > div > .related-listing {
+	margin-right: 20px;
+	width: calc( 33.333% - 27px );	
+}
+
+/* COMPLIANCE */
+#listing-details-view.mrp-style-area .mrp-details-listing-container.region-ALBERTA .mrp-listing-related .related-listing > div {
+    display:flex;
+    flex-direction:column;
+}
+
+#listing-details-view.mrp-style-area .mrp-details-listing-container.region-ALBERTA .mrp-listing-related .related-listing .related-listed-by {
+    /* order:1; */
+    overflow:visible;
+    white-space:normal;
+    margin-bottom: 10px;
+    line-height: 100%;
+}
+
+#listing-details-view.mrp-style-area .mrp-details-listing-container.region-ALBERTA .mrp-listing-related .related-listing .related-image {
+    /* order:2; */
+}
+
+#listing-details-view.mrp-style-area .mrp-details-listing-container.region-ALBERTA .mrp-listing-related .related-listing .related-price {
+    order:3;
+    font-weight:normal;
+    font-size:100%;
+}
+
+#listing-details-view.mrp-style-area .mrp-details-listing-container.region-ALBERTA .mrp-listing-related .related-listing .related-address {
+    order:4
+}
+
+#listing-details-view.mrp-style-area .mrp-details-listing-container.region-ALBERTA .mrp-listing-related .related-listing .related-mls-num {
+    order:5;
+}
