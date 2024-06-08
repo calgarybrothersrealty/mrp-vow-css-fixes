@@ -2059,7 +2059,7 @@ html.mrp-idx-on > body {
   opacity: 1;
 }
 .mrp-blur {
-  opacity: 0.4;
+  opacity: 0.2;
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
@@ -2077,11 +2077,12 @@ html.mrp-vow-wall-on .mrp-vow-wall {
   top: 0;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 20000 !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: .16s;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .title {
   padding: 0 0 20px 0;
@@ -2109,6 +2110,7 @@ html.mrp-vow-wall-on .mrp-vow-wall .wall-content {
   max-width: 340px;
   margin-top: 20px;
   transform: translateY(-150%);
+  font-family: var(--body-font-family);
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content.drop-in {
   animation: dropin 0.3s forwards;
@@ -2141,7 +2143,8 @@ html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-c
   cursor: pointer;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-header {
-  font-size: 23px;
+  font-family: var(--body-font-family);
+  font-size: 22px;
   color: #000;
   font-weight: bold;
   padding: 0px 0px 15px 0px;
@@ -2153,51 +2156,51 @@ html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-t
   display: none;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-content p {
+  display: none;
   font-size: 14px;
   margin: 0px auto;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .large-login {
   display: flex;
   align-items: center;
   max-width: 300px;
-  margin: 12px auto;
-  border-radius: 6px;
-  color: #fff;
+  margin: 20px auto;
+  border: 1px solid #222;
+  color: #000;
+  background: #fff;
+  font-size: 16px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .large-login > div {
-  padding-left: 15px;
+  padding-left: 0px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-login svg {
-  fill: #fff;
+  fill: #4963a4;
   padding: 14px;
-  width: 52px;
+  width: 48px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .facebook-continue {
-  background: #4963a4;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .facebook-continue svg {
-  background: #415891;
+  fill: #1877f2;
   border-radius: 6px 0 0 6px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .google-continue {
-  background: #4285f4;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .google-continue svg {
-  background: #3273db;
+  fill: #34a853;
   border-radius: 6px 0 0 6px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .email-continue {
-  background: #ff5500;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .email-continue svg {
-  background: #da4900;
+  fill: #ea4335;
   border-radius: 6px 0 0 6px;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-social-message {
-  padding: 0;
   font-size: 11px;
+  display: none;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-divider {
   max-width: 320px;
@@ -2220,15 +2223,16 @@ html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-d
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-skip {
   font-size: 22px;
-  color: #28bad2;
+  color: #000;
   padding: 5px 0 5px 0;
-  display: block;
+  display: none;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-vow-prompt-v2 .mrp-popup-signin {
   font-size: 14px;
   padding: 5px 0 5px 0;
   display: block;
   text-decoration: underline;
+  color: #444;
 }
 html.mrp-vow-wall-on .mrp-vow-wall .wall-content .mrp-popup-close {
   background-color: black;
@@ -2299,8 +2303,8 @@ html.mrp-vow-wall-on .mrp-vow-wall .wall-content .buttons .btn:first-child {
   }
 }
 html.mrp-vow-wall-on .mrp-vow-wall ~ body {
-  -webkit-filter: blur(10px);
-  filter: blur(10px);
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
   z-index: 0 !important;
   opacity: 0.4;
 }
